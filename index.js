@@ -1,11 +1,26 @@
-import { initializeApp } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-app.js"
-import { getDatabase, ref, push, onValue, remove } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-database.js"
 
-const appSettings = {
-    databaseURL: "https://shoppinglist-ee322-default-rtdb.firebaseio.com/"
-}
 
-const app = initializeApp(appSettings)
+// Import the functions you need from the SDKs you need
+//import { initializeApp } from "https://www.gstatic.com/firebasejs/10.10.0/firebase-app.js";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+// Your web app's Firebase configuration
+const firebaseConfig = {
+    apiKey: "AIzaSyDVPQ0sMABp8t06qOEiYGXHyzUIePQDgVg",
+    authDomain: "shoppinglist-ee322.firebaseapp.com",
+    databaseURL: "https://shoppinglist-ee322-default-rtdb.firebaseio.com",
+    projectId: "shoppinglist-ee322",
+    storageBucket: "shoppinglist-ee322.appspot.com",
+    messagingSenderId: "213939712513",
+    appId: "1:213939712513:web:bd746d9aed683294fb8600"
+};
+
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.10.0/firebase-app.js"
+import { getDatabase, ref, push, onValue, remove } from "https://www.gstatic.com/firebasejs/10.10.0/firebase-database.js"
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig)
 const database = getDatabase(app)
 const shoppingListInDB = ref(database, "shoppingList")
 
